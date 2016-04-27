@@ -8,6 +8,7 @@ use App\User;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
+use Illuminate\Support\Facades\Auth;
 
 //use Validator;
 
@@ -71,7 +72,7 @@ use AuthenticatesAndRegistersUsers,
 
     public function authLogin(AuthRequest $request) {
         if ($request->isMethod('post')) {
-            
+            dd(Auth::guard('web')->attempt(['email' => $request['email'], 'password' => $request['password']]));
         }
     }
 

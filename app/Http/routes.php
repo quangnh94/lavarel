@@ -16,3 +16,7 @@ Route::post('auth/login', 'Auth\AuthController@authLogin');
 Route::get('auth/login', function() {
     return view('signin.main');
 });
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
