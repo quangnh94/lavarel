@@ -12,8 +12,7 @@
         <div class="form-group mb10">
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                <!--<input type="text" class="form-control" placeholder="Enter Username">-->
-                {!! Form::text('email', null, ['class' => 'form-control', 'placeholder' => 'Enter Your Email']) !!}
+                {{ Form::text('email', null, ['class' => 'form-control', 'placeholder' => 'Enter Your Password']) }}
             </div>
         </div>
         <div class="form-group nomargin">
